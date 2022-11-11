@@ -8,7 +8,7 @@
 
 factorito es un amigo, un compañero <br> el especialista que se volvio
 bit <br> un reportero cocinero tercero <br> la herramienta singular, el
-escencial kit <br>
+esencial kit <br>
 
 ## Que es
 
