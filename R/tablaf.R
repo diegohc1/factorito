@@ -1,6 +1,21 @@
-
-
-
+#' Tabla de frecuencias (Frequency table)
+#'
+#' Lo mismo que table() pero devuelve un data frame y acepta pesos (Same as table() but returns a dataframe and accepts weights)
+#'
+#' @param data data frame
+#' @param x variable categorica (categorical variable)
+#' @param peso en caso hayan pesos (if there are weights)
+#' @param na en caso se consideren valores perdidos
+#' @param compara util para comparar los porcentajes segun el grupo
+#'
+#' @return data frame con la cantidad de casos (n) y porcentaje (prop)
+#' @export
+#'
+#' @importFrom magrittr "%>%"
+#' @import dplyr tidyr
+#'
+#' @examples
+#' tablaf(mtcars, "gear")
 
 tablaf <- function(data, x, peso = NULL, na = NULL, compara = NULL){
 
