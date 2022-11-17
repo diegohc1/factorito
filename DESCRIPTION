@@ -13,5 +13,8 @@ URL: https://github.com/diegohc1/factorito
 BugReports: https://github.com/diegohc1/factorito/issues
 Imports: 
     dplyr,
+    lavaan,
     magrittr,
+    psych,
+    semTools,
     tidyr

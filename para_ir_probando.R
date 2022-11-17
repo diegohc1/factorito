@@ -21,6 +21,9 @@ devtools::check()
 usethis::use_package("dplyr")
 usethis::use_package("tidyr")
 usethis::use_package("magrittr")
+usethis::use_package("lavaan")
+usethis::use_package("psych")
+usethis::use_package("semTools")
 
 # licencia? como funciona? coloquemos igual
 usethis::use_mit_license()
