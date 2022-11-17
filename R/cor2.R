@@ -5,7 +5,7 @@
 #' @param data data frame
 #' @param r redondear valores
 #' @param long en caso se requiera en formato dataframe
-#' @param corr si colocas 'poly' aplica correlación policorica
+#' @param corr si colocas 'poly' aplica correlacion policorica
 #'
 #' @return matriz de correlaciones
 #' @export

@@ -13,7 +13,7 @@ cor2(data, r = 2, long = NULL, corr = NULL)
 
 \item{long}{en caso se requiera en formato dataframe}
 
-\item{corr}{si colocas 'poly' aplica correlación policorica}
+\item{corr}{si colocas 'poly' aplica correlacion policorica}
 }
 \value{
 matriz de correlaciones

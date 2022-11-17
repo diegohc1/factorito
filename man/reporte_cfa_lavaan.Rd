@@ -2,7 +2,7 @@
 % Please edit documentation in R/reporte_cfa_lavaan.R
 \name{reporte_cfa_lavaan}
 \alias{reporte_cfa_lavaan}
-\title{Acomoda información del CFA para el reporte}
+\title{Acomoda informacion del CFA para el reporte}
 \usage{
 reporte_cfa_lavaan(model_cfa_lavaan, puntajes = TRUE)
 }
@@ -15,7 +15,7 @@ reporte_cfa_lavaan(model_cfa_lavaan, puntajes = TRUE)
 lista con indicadores de ajuste, cargas factoriales y confiabilidad
 }
 \description{
-Toma un objeto cfa del paquete lavaan y acomoda la información para el reporte psicometrico
+Toma un objeto cfa del paquete lavaan y acomoda la informacion para el reporte psicometrico
 }
 \examples{
 \dontrun{

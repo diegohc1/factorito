@@ -9,7 +9,7 @@ reporte_pca(x, corr = NULL, puntajes = TRUE)
 \arguments{
 \item{x}{dataframe}
 
-\item{corr}{con "poly" realiza correlación policorica}
+\item{corr}{con "poly" realiza correlacion policorica}
 
 \item{puntajes}{si es que se quiere puntajes}
 }

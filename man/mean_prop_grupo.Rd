@@ -2,9 +2,9 @@
 % Please edit documentation in R/mean_prop_grupo.R
 \name{mean_prop_grupo}
 \alias{mean_prop_grupo}
-\title{Promedio de una variable según grupos}
+\title{Promedio de una variable segun grupos}
 \usage{
-mean_prop_grupo(data, m, w = NULL, vis_na = TRUE)
+mean_prop_grupo(data, m, w = NULL, vis_na = NULL)
 }
 \arguments{
 \item{data}{data frame}
@@ -16,10 +16,10 @@ mean_prop_grupo(data, m, w = NULL, vis_na = TRUE)
 \item{vis_na}{en caso se consideren valores perdidos}
 }
 \value{
-data frame con el promedio según grupo, la cantidad de casos (n) y porcentaje (prop)
+data frame con el promedio segun grupo, la cantidad de casos (n) y porcentaje (prop)
 }
 \description{
-Promedio de una variable según grupos
+Promedio de una variable segun grupos
 }
 \examples{
 dplyr::group_by(iris, Species) |> mean_prop_grupo(m = "Sepal.Width", w = "Petal.Width")

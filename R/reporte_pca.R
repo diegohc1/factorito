@@ -3,7 +3,7 @@
 #' Realiza un analisis de componentes principales y devuelve la varianza explicada, las cargas y puntajes del primer componente
 #'
 #' @param x dataframe
-#' @param corr con "poly" realiza correlación policorica
+#' @param corr con "poly" realiza correlacion policorica
 #' @param puntajes si es que se quiere puntajes
 #'
 #' @return lista con la varianza explicada, cargas, alpha de cronbach y puntajes del primer componente
@@ -21,6 +21,7 @@ reporte_pca <- function(x, corr = NULL, puntajes = TRUE){
 
   if(is.null(corr)){
     ee <- eigen(cor(x), symmetric = FALSE) # symmetric=FALSE previene cargas negativas [espero]
+    alfa <- psych::alpha(cor(x), warnings = FALSE)$feldt$alpha[[1]] #Confiabilidad
   }else{
     cor_pol <- psych::polychoric(x)$rho
     ee <- eigen(cor_pol, symmetric = FALSE)

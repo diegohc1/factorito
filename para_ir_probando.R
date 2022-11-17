@@ -24,6 +24,7 @@ usethis::use_package("magrittr")
 usethis::use_package("lavaan")
 usethis::use_package("psych")
 usethis::use_package("semTools")
+usethis::use_package("ggplot2")
 
 # licencia? como funciona? coloquemos igual
 usethis::use_mit_license()
@@ -32,6 +33,11 @@ usethis::use_mit_license()
 devtools::document()
 # ?tablaf, sip, se agrega! pero no salen las tildes! :S :(
 # ?tablaf_col
+# ?reporte_cfa_lavaan
+# ?cor2
+# ?reporte_pca
+# ?mean_prop_grupo
+# ?g_patron_missing
 
 # usethis::use_readme_rmd() # para abrir la ventana de readme
 devtools::build_readme() # para render

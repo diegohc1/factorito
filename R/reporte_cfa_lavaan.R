@@ -1,6 +1,6 @@
-#' Acomoda información del CFA para el reporte
+#' Acomoda informacion del CFA para el reporte
 #'
-#' Toma un objeto cfa del paquete lavaan y acomoda la información para el reporte psicometrico
+#' Toma un objeto cfa del paquete lavaan y acomoda la informacion para el reporte psicometrico
 #'
 #' @param model_cfa_lavaan objeto cfa de lavaan
 #' @param puntajes si quieres puntajes
