@@ -9,7 +9,8 @@
 #' @return lista con la varianza explicada, cargas, alpha de cronbach y puntajes del primer componente
 #' @export
 #'
-#' @import psych
+#' @importFrom psych alpha
+#' @importFrom psych polychoric
 #'
 #' @examples
 #'
@@ -21,11 +22,11 @@ reporte_pca <- function(x, corr = NULL, puntajes = TRUE){
 
   if(is.null(corr)){
     ee <- eigen(cor(x), symmetric = FALSE) # symmetric=FALSE previene cargas negativas [espero]
-    alfa <- psych::alpha(cor(x), warnings = FALSE)$feldt$alpha[[1]] #Confiabilidad
+    cronbach <- psych::alpha(cor(x), warnings = FALSE)$feldt$alpha[[1]] #Confiabilidad
   }else{
     cor_pol <- psych::polychoric(x)$rho
     ee <- eigen(cor_pol, symmetric = FALSE)
-    alfa <- psych::alpha(cor_pol, warnings = FALSE)$feldt$alpha[[1]] #Confiabilidad
+    cronbach <- psych::alpha(cor_pol, warnings = FALSE)$feldt$alpha[[1]] #Confiabilidad
   }
 
   #calculamos varianza (val), cargas (l), pesos (w)
@@ -48,8 +49,8 @@ reporte_pca <- function(x, corr = NULL, puntajes = TRUE){
   varex <- format(round(val[1]/sum(val)*100, 2), decimal.mark = ",")
 
   if(puntajes == TRUE){
-    return(list(puntajes = s[, 1], indicadores = varex, cargas = cargas, confiabilidad = alfa))}
+    return(list(puntajes = s[, 1], varianza_explicada = varex, cargas = cargas, cronbach = cronbach))}
   else {
-    return(list(indicadores = varex, cargas = cargas, confiabilidad = alfa))}
+    return(list(varianza_explicada = varex, cargas = cargas, cronbach = cronbach))}
 
 }

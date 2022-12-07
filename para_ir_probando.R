@@ -41,3 +41,4 @@ devtools::document()
 
 # usethis::use_readme_rmd() # para abrir la ventana de readme
 devtools::build_readme() # para render
+

@@ -8,7 +8,8 @@
 #' @return lista con indicadores de ajuste, cargas factoriales y confiabilidad
 #' @export
 #'
-#' @import lavaan semTools
+#' @import lavaan
+#' @importFrom semTools compRelSEM
 #'
 #' @examples
 #' \dontrun{
@@ -39,14 +40,14 @@ reporte_cfa_lavaan <- function(model_cfa_lavaan, puntajes = TRUE){
     ifelse(Indicadores == "rmsea",  paste0("[", round(fit1[5], 3), "-", round(fit1[6], 3), "]"), "")})
 
   # el paquete indica que "reliability" esta deprecated, indica usar "compRelSEM"
-  confiabilidad <- semTools::compRelSEM(model_cfa_lavaan)
+  omega1 <- semTools::compRelSEM(model_cfa_lavaan)
 
   if(puntajes == TRUE){
     puntajes1 <- as.data.frame(lavaan::lavPredict(model_cfa_lavaan))
   }
 
   if(puntajes == TRUE){
-    return(list(cargas = m, indicadores = indicadores1, confiabilidad = confiabilidad, puntajes = puntajes1))}
-  else {return(list(cargas = m, indicadores = indicadores1, confiabilidad = confiabilidad))}
+    return(list(cargas = m, indicadores = indicadores1, omega1 = omega1, puntajes = puntajes1))}
+  else {return(list(cargas = m, indicadores = indicadores1, omega1 = omega1))}
 
 }

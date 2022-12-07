@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @import dplyr ggplot2 tidyr
+#' @importFrom ggplot2 alpha
 #'
 #'
 #' @examples
@@ -25,7 +26,7 @@ g_patron_missing <- function(data, cols = NULL, text.size = 5){
     tidyr::gather(-id, key = "key", value = "val") %>%
     dplyr::mutate(isna = is.na(val)) %>%
     ggplot2::ggplot(aes(rev(key), id, fill = isna)) +
-    geom_raster(alpha = 0.8) +
+    ggplot2::geom_raster(alpha = 0.8) +
     theme_minimal() +
     theme(panel.grid = element_blank(),
           axis.text.y = element_text(size = text.size, color = "black", hjust = 0), #
@@ -40,3 +41,4 @@ g_patron_missing <- function(data, cols = NULL, text.size = 5){
     coord_flip()
 
 }
+
