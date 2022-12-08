@@ -42,3 +42,9 @@ devtools::document()
 # usethis::use_readme_rmd() # para abrir la ventana de readme
 devtools::build_readme() # para render
 
+# esto soluciona: Non-standard file/directory found at top level
+usethis::use_build_ignore("para_ir_probando.R", escape = TRUE)
+
+# no visible binding for global variable ?
+usethis::edit_r_environ()
+

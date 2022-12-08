@@ -11,6 +11,7 @@
 #' @export
 #'
 #' @import dplyr
+#' @importFrom stats complete.cases weighted.mean
 #'
 #' @examples
 #' dplyr::group_by(iris, Species) |> mean_prop_grupo(m = "Sepal.Width", w = "Petal.Width")

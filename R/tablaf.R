@@ -19,8 +19,6 @@
 
 tablaf <- function(data, x, peso = NULL, na = NULL, compara = NULL){
 
-  if(!require(dplyr)) stop("'dplyr' debe estar instalado")
-
   if(!is.null(peso)){peso_s <- dplyr::sym(peso)}
   if(!is.null(peso)){
     if(!sum(is.na(data[[peso]])) == 0) stop("La variable de pesos tiene missing")

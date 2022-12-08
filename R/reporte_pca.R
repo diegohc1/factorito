@@ -11,6 +11,7 @@
 #'
 #' @importFrom psych alpha
 #' @importFrom psych polychoric
+#' @importFrom stats cor
 #'
 #' @examples
 #'

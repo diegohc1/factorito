@@ -10,6 +10,7 @@
 #'
 #' @import lavaan
 #' @importFrom semTools compRelSEM
+#' @importFrom stats setNames
 #'
 #' @examples
 #' \dontrun{
