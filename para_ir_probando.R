@@ -25,6 +25,8 @@ usethis::use_package("lavaan")
 usethis::use_package("psych")
 usethis::use_package("semTools")
 usethis::use_package("ggplot2")
+usethis::use_package("lme4")
+usethis::use_package("purrr")
 
 # licencia? como funciona? coloquemos igual
 usethis::use_mit_license()
@@ -38,6 +40,9 @@ devtools::document()
 # ?reporte_pca
 # ?mean_prop_grupo
 # ?g_patron_missing
+# ?dif_sig
+# ?pca_1
+# ?cfa_recursivo_lavaan
 
 # usethis::use_readme_rmd() # para abrir la ventana de readme
 devtools::build_readme() # para render

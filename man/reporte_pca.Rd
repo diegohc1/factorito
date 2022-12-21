@@ -17,7 +17,7 @@ reporte_pca(x, corr = NULL, puntajes = TRUE)
 lista con la varianza explicada, cargas, alpha de cronbach y puntajes del primer componente
 }
 \description{
-Realiza un analisis de componentes principales y devuelve la varianza explicada, las cargas y puntajes del primer componente
+Realiza un analisis de componentes principales y devuelve la varianza explicada, las cargas y puntajes del primer componente.
 }
 \examples{
 

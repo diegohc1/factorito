@@ -17,4 +17,6 @@ Imports:
     magrittr,
     psych,
     semTools,
-    tidyr
+    tidyr,
+    purrr,
+    lme4

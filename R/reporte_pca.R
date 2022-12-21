@@ -1,6 +1,6 @@
 #' Analisis de componentes principales (PCA)
 #'
-#' Realiza un analisis de componentes principales y devuelve la varianza explicada, las cargas y puntajes del primer componente
+#' Realiza un analisis de componentes principales y devuelve la varianza explicada, las cargas y puntajes del primer componente.
 #'
 #' @param x dataframe
 #' @param corr con "poly" realiza correlacion policorica
