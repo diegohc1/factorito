@@ -19,4 +19,6 @@ Imports:
     semTools,
     tidyr,
     purrr,
-    lme4
+    lme4,
+    glue,
+    MplusAutomation

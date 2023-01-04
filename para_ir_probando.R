@@ -27,6 +27,8 @@ usethis::use_package("semTools")
 usethis::use_package("ggplot2")
 usethis::use_package("lme4")
 usethis::use_package("purrr")
+usethis::use_package("glue")
+usethis::use_package("MplusAutomation")
 
 # licencia? como funciona? coloquemos igual
 usethis::use_mit_license()
@@ -43,6 +45,8 @@ devtools::document()
 # ?dif_sig
 # ?pca_1
 # ?cfa_recursivo_lavaan
+# ?mplus_hlm
+# ?mpluscoef
 
 # usethis::use_readme_rmd() # para abrir la ventana de readme
 devtools::build_readme() # para render
