@@ -19,17 +19,20 @@
 #' @examples
 #' \dontrun{
 #' rr <- "D:/EM22/02-reportes-scripts/03-cruce-con-rendimiento/2-modelos-ffaa/mods/mod"
-#' m00 <- reg_mplus(bd1, y = "M500_L", x1 = "ise"
-#' peso_est = "Peso_mate", peso_ie = "peso_ie",
-#' idie = "cod_mod7",
-#' r = rr)
+#' m00 <- reg_mplus(bd1,
+#'                  y = "M500_L",
+#'                  x1 = "ise"
+#'                  peso_est = "Peso_mate",
+#'                  peso_ie = "peso_ie",
+#'                  idie = "cod_mod7",
+#'                  r = rr)
 #' }
 #'
 
 mplus_hlm <- function(data, y, x1 = NULL, x2 = NULL, peso_est, peso_ie, idie, r){
 
-  if (is.null(x2)) {x2 = ""}
-  if (is.null(x1)) {x1 = ""}
+  if (is.null(x2)) {x2 = ""} else x2 <- paste(x2, collapse = " ")
+  if (is.null(x1)) {x1 = ""} else x1 <- paste(x1, collapse = " ")
 
   # definimos las variables
   vars <-
