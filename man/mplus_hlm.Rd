@@ -32,10 +32,13 @@ Regresion multinivel con pesos. Una version mas fluida para usar las bondades de
 \examples{
 \dontrun{
 rr <- "D:/EM22/02-reportes-scripts/03-cruce-con-rendimiento/2-modelos-ffaa/mods/mod"
-m00 <- reg_mplus(bd1, y = "M500_L", x1 = "ise"
-peso_est = "Peso_mate", peso_ie = "peso_ie",
-idie = "cod_mod7",
-r = rr)
+m00 <- reg_mplus(bd1,
+                 y = "M500_L",
+                 x1 = "ise"
+                 peso_est = "Peso_mate",
+                 peso_ie = "peso_ie",
+                 idie = "cod_mod7",
+                 r = rr)
 }
 
 }
