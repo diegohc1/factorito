@@ -57,3 +57,4 @@ usethis::use_build_ignore("para_ir_probando.R", escape = TRUE)
 # no visible binding for global variable ?
 usethis::edit_r_environ()
 
+
